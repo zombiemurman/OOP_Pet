@@ -11,15 +11,18 @@ public abstract class Character : MonoBehaviour
     [SerializeField] protected float RotationSpeed = 700;
     [SerializeField] protected int Health = 100;
 
-
     protected virtual void MoveTo()
     {
+
         Vector3 input = new Vector3(Input.GetAxisRaw(_horizontalAxisName), 0, Input.GetAxisRaw(_verticalAxisName));
 
         Vector3 normalizeInput = input.normalized;
 
         Vector3 normalizedMoveTo = normalizeInput * Speed * Time.deltaTime;
         ProcessMoveTo(normalizedMoveTo, transform);
+
+        if (input == Vector3.zero)
+            return;
 
         float step = RotationSpeed * Time.deltaTime;
         ProcessRotateTo(normalizeInput, transform, step);
