@@ -19,7 +19,9 @@ public class ItemsCollector : MonoBehaviour
 
         item.transform.SetParent(transform);
         item.transform.position = _inventory.transform.position;
-        
+
+        item.transform.rotation = transform.rotation;
+
         _inventory.Add(item);
             
     }

@@ -19,7 +19,7 @@ public class Spawner : MonoBehaviour
         {
             Transform spawnPoint = _spawnPoints[i];
 
-            Item item = Instantiate(_itemsPrefab[i], spawnPoint.position, Quaternion.identity);
+            Instantiate(_itemsPrefab[i], spawnPoint.position, Quaternion.identity);
         }
     }
 }
