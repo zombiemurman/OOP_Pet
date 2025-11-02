@@ -8,4 +8,21 @@ public class Hero : Character
     {
         MoveTo();
     }
+
+    public void IncreaseSpeed(int value)
+    {
+        if (value < 0)
+            return;
+
+        Speed *= value;
+    }
+
+    public void IncreaseHealth(int value)
+    {
+        if (value < 0)
+            return;
+
+        Health += value;
+        Debug.Log($"Health = {Health}");
+    }
 }

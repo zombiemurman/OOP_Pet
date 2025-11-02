@@ -7,8 +7,10 @@ public abstract class Character : MonoBehaviour
     protected string _horizontalAxisName = "Horizontal";
     protected string _verticalAxisName = "Vertical";
 
-    [SerializeField] protected float _speed = 5;
-    [SerializeField] protected float _rotationSpeed = 700;
+    [SerializeField] protected float Speed = 5;
+    [SerializeField] protected float RotationSpeed = 700;
+    [SerializeField] protected int Health = 100;
+
 
     protected virtual void MoveTo()
     {
@@ -16,10 +18,10 @@ public abstract class Character : MonoBehaviour
 
         Vector3 normalizeInput = input.normalized;
 
-        Vector3 normalizedMoveTo = normalizeInput * _speed * Time.deltaTime;
+        Vector3 normalizedMoveTo = normalizeInput * Speed * Time.deltaTime;
         ProcessMoveTo(normalizedMoveTo, transform);
 
-        float step = _rotationSpeed * Time.deltaTime;
+        float step = RotationSpeed * Time.deltaTime;
         ProcessRotateTo(normalizeInput, transform, step);
     }
 
