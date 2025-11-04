@@ -4,9 +4,10 @@ using UnityEngine;
 
 public class Hero : Character
 {
-    private void Update()
+
+    private void Awake()
     {
-        MoveTo();
+        SetHeroSpeed(Speed);
     }
 
     public void IncreaseSpeed(int value)
@@ -15,6 +16,7 @@ public class Hero : Character
             return;
 
         Speed *= value;
+        SetHeroSpeed(Speed);
     }
 
     public void IncreaseHealth(int value)
@@ -24,5 +26,15 @@ public class Hero : Character
 
         Health += value;
         Debug.Log($"Health = {Health}");
+    }
+
+    private void SetHeroSpeed(float speed)
+    {
+        CharacterMover characterMover = gameObject.GetComponent<CharacterMover>();
+
+        if (characterMover == null)
+            return;
+
+        characterMover.SetSpeed(speed);
     }
 }

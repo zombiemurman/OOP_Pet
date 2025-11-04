@@ -136,7 +136,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _barrelGun: {fileID: 5523442279348170022}
-  _bulletPrefab: {fileID: -8925967943153619862, guid: 83787cce016241c409b4335029006de3,
+  _bulletPrefab: {fileID: 7501687754999811376, guid: 83787cce016241c409b4335029006de3,
     type: 3}
 --- !u!1001 &5911248138057394405
 PrefabInstance:

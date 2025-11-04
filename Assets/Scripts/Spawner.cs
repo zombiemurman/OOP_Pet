@@ -5,7 +5,6 @@ using UnityEngine;
 public class Spawner : MonoBehaviour
 {
     [SerializeField] private List<Item> _itemsPrefab;
-
     [SerializeField] private List<Transform> _spawnPoints;
 
     private void Start()

@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class ItemHeal : Item
 {
-
     protected override void ItemAction()
     {
         Hero hero = GetComponentInParent<Hero>();
@@ -14,5 +13,4 @@ public class ItemHeal : Item
 
         Debug.Log("Use Heal");
     }
-
 }

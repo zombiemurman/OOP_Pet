@@ -1,29 +1,24 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Windows;
 
 public class Bullet : MonoBehaviour
 {
     [SerializeField] private float _lifeTime;
 
-    private Vector3 _directionShot;
+    private float _currentLifeTime;
+
+    private void Awake()
+    {
+        _currentLifeTime = _lifeTime;
+    }
 
     private void Update()
     {
-        if (_directionShot == Vector3.zero)
-            return;
+        _currentLifeTime -= Time.deltaTime;
 
-        ProcessMoveTo(_directionShot, transform);
+        if ( _currentLifeTime <= 0 )
+            Destroy(gameObject);
     }
-
-    public void Initialization(Vector3 directionShot)
-    {
-        _directionShot = directionShot;
-    }
-
-    private void ProcessMoveTo(Vector3 direction, Transform transform)
-    {
-        transform.Translate(direction, Space.World);
-    }
-
 }

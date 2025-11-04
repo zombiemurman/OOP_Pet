@@ -4,13 +4,6 @@ using UnityEngine;
 
 public class ItemSpeed : Item
 {
-    //public override void Use()
-    //{
-    //    base.Use();
-
-        
-    //}
-
     protected override void ItemAction()
     {
         Hero hero = GetComponentInParent<Hero>();
@@ -20,5 +13,4 @@ public class ItemSpeed : Item
 
         Debug.Log("Use Speed");
     }
-
 }

@@ -14,7 +14,6 @@ public class EffectItem : MonoBehaviour
             return;
 
         destroyEffectPrefab.Play();
-
     }
 
 }

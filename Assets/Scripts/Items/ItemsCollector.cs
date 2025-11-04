@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class ItemsCollector : MonoBehaviour
 {
-
     [SerializeField] private Inventory _inventory;
 
     private void OnTriggerEnter(Collider other)
@@ -22,7 +21,6 @@ public class ItemsCollector : MonoBehaviour
 
         item.transform.rotation = transform.rotation;
 
-        _inventory.Add(item);
-            
+        _inventory.Add(item);    
     }
 }

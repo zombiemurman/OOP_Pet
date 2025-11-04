@@ -66,5 +66,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b56e528bd528ba6419fc620faa41aa23, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _destroyEffectPrefab: {fileID: 2359083763919221425, guid: b20821cdeccf77c47ad090c83bd369d8,
+  _destroyEffectPrefab: {fileID: 8367907410985086599, guid: 0b493b97a8e419d46903c1b023460740,
     type: 3}
