@@ -4,12 +4,14 @@ using UnityEngine;
 
 public class ItemSpeed : Item
 {
-    protected override void ItemAction()
-    {
-        Hero hero = GetComponentInParent<Hero>();
+    private float _speed = 20;
 
-        if (hero != null)
-            hero.IncreaseSpeed(10);
+    protected override void ItemAction(GameObject gameObjectUse)
+    {
+        Mover mover = gameObjectUse.GetComponentInParent<Mover>();
+
+        if (mover != null)
+            mover.SetSpeed(_speed);
 
         Debug.Log("Use Speed");
     }

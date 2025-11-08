@@ -8,9 +8,13 @@ public class ItemGun : Item
     [SerializeField] private Transform _barrelGun;
     [SerializeField] private BulletMover _bulletPrefab;
 
-    protected override void ItemAction()
+    protected override void ItemAction(GameObject gameObjectUse)
     {
-        Shot();
+        Shooter shooter = gameObjectUse.GetComponentInParent<Shooter>();
+
+        if (shooter != null)
+            Shot();
+
         Debug.Log("Use Gun");
     }
 

@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class BulletMover : CharacterMover
+public class BulletMover : Mover
 {
     private Vector3 _directionShot;
 

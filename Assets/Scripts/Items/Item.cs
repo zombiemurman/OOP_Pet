@@ -4,16 +4,13 @@ using UnityEngine;
 
 public abstract class Item : MonoBehaviour
 {
-    public virtual void Use()
+    public virtual void Use(GameObject gameObjectUse)
     {
-        if (Input.GetKeyDown(KeyCode.F))
-        {
-            ItemAction();
+            ItemAction(gameObjectUse);
 
             DestroyEffect();
 
             Destroy(gameObject);
-        }
     }
 
     private void DestroyEffect()
@@ -26,6 +23,6 @@ public abstract class Item : MonoBehaviour
         effectItem.DestroyEffect();
     }
 
-    protected abstract void ItemAction();
+    protected abstract void ItemAction(GameObject gameObjectUse);
 }
 

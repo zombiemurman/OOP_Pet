@@ -4,12 +4,14 @@ using UnityEngine;
 
 public class ItemHeal : Item
 {
-    protected override void ItemAction()
-    {
-        Hero hero = GetComponentInParent<Hero>();
+    private int _heal = 10;
 
-        if (hero != null)
-            hero.IncreaseHealth(10);
+    protected override void ItemAction(GameObject gameObjectUse)
+    {
+        Health health = gameObjectUse.GetComponentInParent<Health>();
+
+        if (health != null)
+            health.IncreaseHealth(_heal);
 
         Debug.Log("Use Heal");
     }

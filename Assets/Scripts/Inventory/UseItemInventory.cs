@@ -18,7 +18,7 @@ public class UseItemInventory : MonoBehaviour
                 return;
             }
 
-            item.Use();
+            item.Use(gameObject);
         }
     }
 }

@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public abstract class CharacterRotator : MonoBehaviour
+public abstract class Rotator : MonoBehaviour
 {
     protected string _horizontalAxisName = "Horizontal";
     protected string _verticalAxisName = "Vertical";

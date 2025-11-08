@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class HeroRotator : CharacterRotator
+public class HeroRotator : Rotator
 {
     protected override void Update()
     {

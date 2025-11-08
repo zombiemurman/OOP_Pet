@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
 
-public abstract class CharacterMover : MonoBehaviour
+public abstract class Mover : MonoBehaviour
 {
     protected string _horizontalAxisName = "Horizontal";
     protected string _verticalAxisName = "Vertical";

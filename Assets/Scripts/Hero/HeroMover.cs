@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class HeroMover : CharacterMover
+public class HeroMover : Mover
 {
 
     protected override void Update()
