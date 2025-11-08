@@ -5,9 +5,7 @@ using UnityEngine;
 
 public abstract class Mover : MonoBehaviour
 {
-    protected string _horizontalAxisName = "Horizontal";
-    protected string _verticalAxisName = "Vertical";
-
+    
     [SerializeField] protected float Speed = 5;
 
     protected virtual void Update()

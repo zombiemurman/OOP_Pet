@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class HeroMover : Mover
 {
+    private string _horizontalAxisName = "Horizontal";
+    private string _verticalAxisName = "Vertical";
 
     protected override void Update()
     {
